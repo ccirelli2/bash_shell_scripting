@@ -1,0 +1,5 @@
+#! bin/bash
+echo '$# number of pos parameters'          $#
+echo '$$ process id'                        $$
+echo '$0 path to current running script'    $0 
+echo '$* all pos params'                    $*
