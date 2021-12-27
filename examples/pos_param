@@ -1,0 +1,11 @@
+#! /bin/bash
+#: Description  :   Script to show functionality of positional parameters
+#                   $1 is the first input.  So whatever you place after the
+#                   execution of the script will be placed there.
+#                   Ex:
+#                   $ . pos_param John
+#                   Hello, John!
+#                   The same applies to position 3-9.  10 must be  put in {}.
+
+printf "Hello, %s!\n" "$1"
+printf "Hello, %s!\n" "$2"
