@@ -1,0 +1,12 @@
+#1 bin/bash
+#: Description:         Script to show how to access error codes from failed
+#                       failed commands.
+#                       Error codes are stored in $?.
+#: Redirection:         Here we are showing an example of how to redirect
+#                       stderr using the > operator and file descriptors
+#                       2 for stderr and 1 for stdout..
+
+TEST=$(printf "%v\n" 2>&1)
+echo "Error code: $?"
+echo "Error message:" "$TEST"
+# "Error message:" "${TEST}"
