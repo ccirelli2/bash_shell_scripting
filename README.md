@@ -1,2 +1,2 @@
-# Bash_shell_scripting
+# bash_shell_scripting
 Repository for practice bash scripts.
