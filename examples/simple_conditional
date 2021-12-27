@@ -1,0 +1,15 @@
+#!/bin/bash
+#: Description  : If then statement syntax.
+#: Syntax       : [...] used when we are not using operations. ex -d for
+#                 directory.
+
+A=1
+B=2
+
+
+if [ $A < $B ]
+then
+    echo "$A < $B" 
+else
+    echo "$B >= $A"
+fi

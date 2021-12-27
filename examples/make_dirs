@@ -1,0 +1,35 @@
+#!/bin/bash
+#: Description  : write a script that creates a directory called blp inside
+#                 $HOME and populates this directory with two sub-directories
+#                 bin and scripts.
+#  Syntax       : [[...]] allows you to test conditions using operators.
+#                 In the case of this script we are using the -d operator for
+#                 directory.
+
+
+# If Directory bpl does not exist
+if [[ -d $HOME/bpl ]]
+then
+    echo $HOME/bpl alread exists.
+else
+    mkdir $HOME/bpl
+    echo $HOME/bpl created.
+fi
+
+
+if [[ -d $HOME/bpl/bin ]]
+then
+    echo $HOME/bpl/bin already exists.
+else
+    mkdir $HOME/bpl/bin
+    echo $HOME/bpl/bin created.
+fi
+
+
+if [[ -d $HOME/bpl/scripts ]]
+then
+    echo $HOME/bpl/scripts already exists.
+else
+    mkdir $HOME/bpl/scripts
+    echo $HOME/bpl/scripts created.
+fi
