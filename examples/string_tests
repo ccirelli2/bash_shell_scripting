@@ -1,0 +1,90 @@
+#! bin/bash
+#: Description:         Using the built-in command test you can check the
+#
+#: String tests         can be tested for equality or inequality, for nonemtpy
+#                       string or null string nad in bash for alphabetical
+#                       ordering.
+#: Operators:           =   equality
+#                       !=  inequality
+#                       ==  equality
+#                       -z  empty
+#                       -n  not-empty
+#
+#                       \> compare lexical positions of strings.
+#
+#: Patter Matching:     [[ ]] are used to evaluate expressions.
+#                       You do not need to preceed this condition with test
+#                       function.
+#                       Parameters are expanded, but word splitting and file
+#                       name expansion are not performed on words between [[ ]]
+#
+#: Note:                While it may be intuitive from the code, the built
+#                       in-function test must be called before the conditional
+#
+# asdf
+
+
+###############################################################################
+# Test - Equality
+###############################################################################
+a='cat'
+b='dog'
+
+echo Testing equality of variables "$a" and "$b"
+if test "$a" = "$b"; then
+    echo --- "$a" equals "$b"
+else
+    echo --- "$a" not equal to "$b"
+fi
+echo -e "\n"
+
+
+###############################################################################
+# Test - Empty String
+###############################################################################
+echo Testing for empty string
+my_string=''
+if test -z $my_string; then
+    echo --- string -$my_string- is empty
+else
+    echo --- string -$my_string- is not empty
+fi
+echo -e "\n"
+
+
+###############################################################################
+# Test - Non-Empty String
+###############################################################################
+echo Testing for non-empty string
+my_string='cat'
+if test -z $my_string; then
+    echo --- string -$my_string- is empty
+else
+    echo --- string -$my_string- is not empty
+fi
+echo -e "\n"
+
+
+###############################################################################
+# Test - Ordering
+###############################################################################
+string1='abc'
+string2='dfg'
+
+echo Testing string ordering for string-1 $string1 vs string-2 $string2
+
+if test "$string1" \> "$string2"; then
+    echo --- strings have the same lexical order
+else
+    echo --- strings do not have the same lexical order
+fi
+echo -e "\n"
+
+
+###############################################################################
+# Test - Patterns
+###############################################################################
+echo testing string patters
+my_string=whatever
+[[ $my_string =~ h[aeiou] ]]
+echo error code $?
