@@ -1,0 +1,4 @@
+#!bin/bash
+# Description:      Definitions and references on bracket usage in bash.
+#
+# ((...))           Shell's arithmetic construct.  

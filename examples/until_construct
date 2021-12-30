@@ -1,0 +1,12 @@
+#!bin/bash
+#
+# Description   Demonstrate syntax for looping constructions.
+#
+#
+
+counter=1
+until [ $counter -eq 10 ]
+do
+    echo Counter: $counter
+    ((counter++))
+done

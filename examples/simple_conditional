@@ -1,7 +1,16 @@
 #!/bin/bash
-#: Description  : If then statement syntax.
-#: Syntax       : [...] used when we are not using operations. ex -d for
-#                 directory.
+#: Description  :   Conditional statements in bash use if, else and fi.
+#: Syntax       :   [...] used when we are not using operations. ex -d for
+#                   directory.
+#: if:              Evaluates a list of one or more commands.
+#
+#                   Syntax:
+#                   if <condition list>
+#                   then
+#                       <list>
+#                   fi
+#
+#
 
 A=1
 B=2

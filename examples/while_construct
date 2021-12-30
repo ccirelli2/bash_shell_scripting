@@ -1,0 +1,17 @@
+#!bin/bash
+#
+# Description:      Demonstrate while loopconstruct.
+#
+# Operation:        -lt compare two numbers and it returns true if the number
+#                   on the left is less than the number on the right.
+#
+
+
+counter=1
+while [ $counter -lt 10 ]
+do
+    echo Counter: $counter
+    ((counter++))
+done
+
+
