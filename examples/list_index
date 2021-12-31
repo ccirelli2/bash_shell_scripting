@@ -1,0 +1,55 @@
+#!/bin/bash
+#
+# Description:      Script to demonstrate how to access values of a bash list.
+# Syntax:
+#                   ${arr[0...n]}   to get value by index number.
+#                   ${arr[@]}       to get all array values.
+#                   ${!arr[@]}      get all index values.
+#                   ${#arr[@]}      get index size.
+#                   arr+=(4)        append value.
+#                   ${arr[@]:s:n}   retreive n elements starting at s and
+#                                   ending at n.
+#
+# @ vs *            All you to print all elements in a single line.
+#
+# Quotes            "${StringArray[@]}" will not split words like "Windows XP"
+#                   ${StringArray[@]} will split on each space such that
+#                   Windows and XP become different elements of the list.
+
+###############################################################################
+# Access Array Elements
+###############################################################################
+declare -a StringArray
+StringArray=(A B C D)
+
+for val in ${StringArray[@]}
+do
+    echo String Value: ${val}
+done
+
+
+###############################################################################
+# Access Array Index 
+###############################################################################
+declare -a StringArray
+StringArray=(E F G H)
+
+for i in ${!StringArray[@]}
+do
+    echo Index Value: ${i}
+done
+
+
+###############################################################################
+# Access Array Elements & Index 
+###############################################################################
+declare -a StringArray
+StringArray=(A B C D)
+
+for i in ${!StringArray[@]}
+do
+    echo Index: ${i} \| Value: ${StringArray[i]}
+done 
+
+
+
