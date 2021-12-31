@@ -5,8 +5,10 @@
 # Operation:        -lt compare two numbers and it returns true if the number
 #                   on the left is less than the number on the right.
 #
+#                   declare -i  declares what follows -i as an object of type
+#                   int
 
-
+declare -i counter
 counter=1
 while [ $counter -lt 10 ]
 do

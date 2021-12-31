@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#
+#
+#
+#
+#
+
+declare -a NamesArray=('Jim' 'John' 'Jack')
+
+for name in ${NamesArray[@]}
+do
+    echo $name
+done
+
