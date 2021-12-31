@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Description:      Used for string pattern matching.
+#
+#
+#
+
+
+echo "Enter the name of an animal"
+read ANIMAL
+echo --- searching for animal $ANIMAL
+
+case $ANIMAL in
+    horse | dog | cat) echo --- $ANIMAL found;;
+    *) echo --- $ANIMAL not found;;
+esac
+
+
+
+
